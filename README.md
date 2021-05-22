@@ -56,6 +56,8 @@ $ npm install
 $ npm start
 ```
 
+[Circular progress bar](https://css-tricks.com/building-progress-ring-quickly/)
+
 ## Credits
 
 This software uses the following open source packages:

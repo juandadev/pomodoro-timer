@@ -1,8 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Timer({ percent }) {
+export default function Timer({ time }) {
   const [progressBar, setProgressBar] = useState({});
+  const [timer, setTimer] = useState([0, 0]);
+  const [percent, setPercent] = useState(100);
+  const [isPaused, setIsPaused] = useState(true);
+
   const circumference = progressBar.radius * 2 * Math.PI;
+  const minutes = timer[0].toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  const seconds = timer[1].toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
 
   function updateSize() {
     const containerWidth =
@@ -16,15 +28,44 @@ export default function Timer({ percent }) {
     });
   }
 
+  function parseTime(seconds) {
+    const minutes = parseInt(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    return [minutes, remainingSeconds];
+  }
+
+  function initializeTimer() {
+    setTimer(parseTime(time));
+  }
+
+  function startTimer() {
+    let seconds = time;
+    setIsPaused(false);
+    setPercent(0);
+
+    const timeInterval = setInterval(() => {
+      seconds -= 1;
+      setTimer(parseTime(seconds));
+      setPercent(((time - seconds) * 100) / time);
+
+      if (seconds <= 0) {
+        clearInterval(timeInterval);
+        setIsPaused(true);
+      }
+    }, 1000);
+  }
+
   useEffect(() => {
     updateSize();
+    initializeTimer();
 
     window.addEventListener('resize', updateSize);
   }, []);
 
   return (
     <div className="pomodoro__timer">
-      <div className="pomodoro__timer__container">
+      <div className="pomodoro__timer__container" onClick={startTimer}>
         <svg
           className="pomodoro__timer__progress"
           width={progressBar.size}
@@ -44,9 +85,9 @@ export default function Timer({ percent }) {
         </svg>
 
         <div className="pomodoro__timer__time">
-          <div className="time">17:59</div>
+          <div className="time">{`${minutes}:${seconds}`}</div>
 
-          <div className="label">pause</div>
+          <p className="label">{isPaused ? 'start' : 'pause'}</p>
         </div>
       </div>
     </div>

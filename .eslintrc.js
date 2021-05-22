@@ -25,5 +25,9 @@ module.exports = {
     'react/forbid-prop-types': ['off'],
     'react/jsx-props-no-spreading': ['off'],
     'no-unused-vars': ['off'],
+    radix: ['off'],
+    'jsx-a11y/click-events-have-key-events': ['off'],
+    'jsx-a11y/no-static-element-interactions': ['off'],
+    'no-console': ['off'],
   },
 };

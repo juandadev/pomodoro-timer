@@ -14,6 +14,10 @@ body {
     color: $white;
 }
 
+.emoji {
+    color: #000;
+}
+
 .pomodoro {
     display: flex;
     flex-direction: column;
@@ -161,10 +165,6 @@ body {
             z-index: 1;
             cursor: pointer;
             user-select: none;
-
-            &:hover .time {
-                font-size: 8.2rem;
-            }
 
             .time {
                 margin-bottom: 1.5rem;
