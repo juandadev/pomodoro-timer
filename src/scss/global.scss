@@ -134,6 +134,14 @@ body {
 
         &__circle {
             stroke: var(--color1);
+
+            @media (max-width: 580px) {
+                stroke-width: 10px;
+            }
+
+            @media (max-width: 425px) {
+                stroke-width: 8px;
+            }
         }
 
         &__time {
@@ -143,6 +151,7 @@ body {
             left: 0;
             right: 0;
             margin: auto;
+            padding-top: 2rem;
             width: fit-content;
             height: fit-content;
             z-index: 1;
@@ -175,6 +184,7 @@ body {
             }
 
             .label {
+                padding-left: 1rem;
                 font-size: 1.2rem;
                 text-align: center;
                 text-transform: uppercase;
