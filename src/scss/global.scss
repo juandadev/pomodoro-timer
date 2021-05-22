@@ -64,6 +64,11 @@ body {
             -ms-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
             -o-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
+            
+            &:hover {
+                color: $white;
+            }
+
             &.active {
                 color: $dark-color;
                 background: var(--color1);
@@ -142,6 +147,7 @@ body {
             height: fit-content;
             z-index: 1;
             cursor: pointer;
+            user-select: none;
 
             &:hover .time {
                 font-size: 8.2rem;
@@ -157,6 +163,7 @@ body {
                 -moz-transition: font 0.3s ease-in-out;
                 -ms-transition: font 0.3s ease-in-out;
                 -o-transition: font 0.3s ease-in-out;
+                user-select: none;
 
                 @media (max-width: 580px) {
                     font-size: 6rem;
@@ -186,10 +193,10 @@ body {
 
     &__settings {
         cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
+        user-select: none;
         
         img {
+            transition: transform 0.3s ease-in-out;
             -webkit-transition: transform 0.3s ease-in-out;
             -moz-transition: transform 0.3s ease-in-out;
             -ms-transition: transform 0.3s ease-in-out;
