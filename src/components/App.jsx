@@ -1,4 +1,6 @@
 import React from 'react';
+import Timer from './Timer';
+
 import cog from '../assets/cog-solid.svg';
 import '../scss/global.scss';
 
@@ -15,27 +17,7 @@ function App() {
         <p className="pomodoro__controls--long">long break</p>
       </div>
 
-      <div className="pomodoro__timer">
-        <div className="pomodoro__timer__container">
-          <svg className="pomodoro__timer__progress" width={330} height={330}>
-            <circle
-              className="pomodoro__timer__circle"
-              strokeWidth={13}
-              stroke="white"
-              fill="transparent"
-              r={223.5}
-              cx={247.5}
-              cy={247.5}
-            />
-          </svg>
-
-          <div className="pomodoro__timer__time">
-            <div className="time">17:59</div>
-
-            <div className="label">pause</div>
-          </div>
-        </div>
-      </div>
+      <Timer />
 
       <div className="pomodoro__settings">
         <img src={cog} width={40} height={40} alt="Settings" title="Settings" />
