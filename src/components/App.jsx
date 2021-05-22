@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Timer from './Timer';
 
 import cog from '../assets/cog-solid.svg';
 import '../scss/global.scss';
 
 function App() {
+  const [percent, setPercent] = useState(100);
+
   return (
     <div className="pomodoro">
       <h1 className="pomodoro__title">pomodoro</h1>
@@ -17,7 +19,7 @@ function App() {
         <p className="pomodoro__controls--long">long break</p>
       </div>
 
-      <Timer />
+      <Timer percent={percent} />
 
       <div className="pomodoro__settings">
         <img src={cog} width={40} height={40} alt="Settings" title="Settings" />

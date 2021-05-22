@@ -15,7 +15,7 @@ module.exports = {
   rules: {
     'prefer-promise-reject-errors': ['off'],
     'react/jsx-filename-extension': ['off'],
-    'react/prop-types': ['warn'],
+    'react/prop-types': ['off'],
     'no-return-assign': ['off'],
     'global-require': ['off'],
     'no-multi-assign': ['warn'],
@@ -24,5 +24,6 @@ module.exports = {
     'no-shadow': ['off'],
     'react/forbid-prop-types': ['off'],
     'react/jsx-props-no-spreading': ['off'],
+    'no-unused-vars': ['off'],
   },
 };

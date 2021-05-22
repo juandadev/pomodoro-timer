@@ -134,6 +134,10 @@ body {
 
         &__circle {
             stroke: var(--color1);
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
 
             @media (max-width: 580px) {
                 stroke-width: 10px;

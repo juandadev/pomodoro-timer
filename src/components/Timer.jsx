@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Timer() {
+export default function Timer({ percent }) {
   const [progressBar, setProgressBar] = useState({});
+  const circumference = progressBar.radius * 2 * Math.PI;
 
   function updateSize() {
     const containerWidth =
@@ -33,6 +34,8 @@ export default function Timer() {
             className="pomodoro__timer__circle"
             strokeWidth={13}
             stroke="white"
+            strokeDashoffset={circumference - (percent / 100) * circumference}
+            strokeDasharray={[circumference, circumference]}
             fill="transparent"
             r={progressBar.radius}
             cx={progressBar.position}
