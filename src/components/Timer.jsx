@@ -42,18 +42,20 @@ export default function Timer({ time }) {
   function startTimer() {
     let seconds = time;
     setIsPaused(false);
-    setPercent(0);
 
-    const timeInterval = setInterval(() => {
-      seconds -= 1;
-      setTimer(parseTime(seconds));
-      setPercent(((time - seconds) * 100) / time);
+    if (isPaused) {
+      setPercent(0);
+      const timeInterval = setInterval(() => {
+        seconds -= 1;
+        setTimer(parseTime(seconds));
+        setPercent(((time - seconds) * 100) / time);
 
-      if (seconds <= 0) {
-        clearInterval(timeInterval);
-        setIsPaused(true);
-      }
-    }, 1000);
+        if (seconds <= 0) {
+          clearInterval(timeInterval);
+          setIsPaused(true);
+        }
+      }, 1000);
+    }
   }
 
   useEffect(() => {
@@ -74,7 +76,6 @@ export default function Timer({ time }) {
           <circle
             className="pomodoro__timer__circle"
             strokeWidth={13}
-            stroke="white"
             strokeDashoffset={circumference - (percent / 100) * circumference}
             strokeDasharray={[circumference, circumference]}
             fill="transparent"

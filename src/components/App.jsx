@@ -22,7 +22,7 @@ function App() {
         <p className="pomodoro__controls--long">long break</p>
       </div>
 
-      <Timer time={10} />
+      <Timer time={100} />
 
       <div className="pomodoro__settings">
         <img src={cog} width={40} height={40} alt="Settings" title="Settings" />
