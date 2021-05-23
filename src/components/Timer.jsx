@@ -82,6 +82,9 @@ export default function Timer({ time }) {
             r={progressBar.radius}
             cx={progressBar.position}
             cy={progressBar.position}
+            style={{
+              transformOrigin: `${progressBar.position}px ${progressBar.position}px`,
+            }}
           />
         </svg>
 
