@@ -30,7 +30,7 @@
   <a href="#support">Support</a>
 </p>
 
-<!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
+![Pomodoro Timer app screenshot](https://imgur.com/eu6bC8e.png)
 
 ## Key Features
 
@@ -55,6 +55,8 @@ $ npm install
 # Run the app
 $ npm start
 ```
+
+[Circular progress bar](https://css-tricks.com/building-progress-ring-quickly/)
 
 ## Credits
 
