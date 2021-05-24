@@ -63,7 +63,7 @@ export default function Timer({ time }) {
     initializeTimer();
 
     window.addEventListener('resize', updateSize);
-  }, []);
+  }, [time]);
 
   return (
     <div className="pomodoro__timer">
@@ -76,7 +76,9 @@ export default function Timer({ time }) {
           <circle
             className="pomodoro__timer__circle"
             strokeWidth={13}
-            strokeDashoffset={circumference - (percent / 100) * circumference}
+            strokeDashoffset={
+              circumference - (percent / 100) * circumference || 0
+            }
             strokeDasharray={[circumference, circumference]}
             fill="transparent"
             r={progressBar.radius}
