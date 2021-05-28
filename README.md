@@ -82,9 +82,9 @@ With the supervision of [Erik Ochoa](https://twitter.com/Elyager), Academic Coac
 
 ---
 
-> Juan Daniel Martínez
+> Juan Daniel Martínez &nbsp;&middot;&nbsp;
 > [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
-> Frontend Developer
+> Frontend Developer &nbsp;&middot;&nbsp;
 > GitHub [@juandadev](https://github.com/juandadev) &nbsp;&middot;&nbsp;
 > Twitter [@juanda_dev_](https://twitter.com/juanda_dev_)
 
