@@ -26,6 +26,7 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#demo">Demo</a> •
   <a href="#credits">Credits</a> •
   <a href="#support">Support</a>
 </p>
@@ -56,11 +57,17 @@ $ npm install
 $ npm start
 ```
 
+## Demo
+
+[Pomodoro Timer](https://pomodoro.juanda.dev)
+
 ## Credits
 
 This software uses the following open source packages:
 
 - [React.js](http://reactjs.org/)
+
+With the supervision of [Erik Ochoa](https://twitter.com/Elyager), Academic Coach at [Platzi Master](https://platzi.com/master/)
 
 ## Support
 
@@ -73,7 +80,9 @@ This software uses the following open source packages:
 
 ---
 
+> Juan Daniel Martínez
 > [juanda.dev](https://juanda.dev) &nbsp;&middot;&nbsp;
+> Frontend Developer
 > GitHub [@juandadev](https://github.com/juandadev) &nbsp;&middot;&nbsp;
 > Twitter [@juanda_dev_](https://twitter.com/juanda_dev_)
 
